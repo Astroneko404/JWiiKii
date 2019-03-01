@@ -16,7 +16,7 @@ def showTags(t, outfile):
 infile = open('data/in.txt', 'r', encoding='utf-8')
 outfile = open('data/out.txt', 'w+', encoding='utf-8')
 
-opt = "-model full_svm.mod"
+opt = "-model model/full_svm.mod"
 mk = Mykytea.Mykytea(opt)
 
 while True:

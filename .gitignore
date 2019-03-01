@@ -1,0 +1,4 @@
+
+model/compact_lr.mod
+model/compact_svm.mod
+model/full_svm.mod
