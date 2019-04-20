@@ -4,7 +4,6 @@ class Query:
         return
 
     queryContent = ""
-    topicId = ""
 
     def get_content(self):
         return self.queryContent
