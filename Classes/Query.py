@@ -6,14 +6,8 @@ class Query:
     queryContent = ""
     topicId = ""
 
-    def getQueryContent(self):
+    def get_content(self):
         return self.queryContent
 
-    def getTopicId(self):
-        return self.topicId
-
-    def setQueryContent(self, content):
-        self.queryContent=content
-
-    def setTopicId(self, id):
-        self.topicId=id
+    def set_content(self, content):
+        self.queryContent = content
