@@ -1,4 +1,3 @@
-import Classes.Query as Query
 import Classes.Document as Document
 import Classes.Path as Path
 import whoosh.index as index
@@ -8,10 +7,10 @@ from whoosh import scoring
 
 class QueryRetrievalModel:
 
-    indexReader=[]
+    indexReader = []
 
-    query_parser=[]
-    searcher=[]
+    query_parser = []
+    searcher = []
 
     def __init__(self, ixReader):
         path_dir = Path.IndexDir

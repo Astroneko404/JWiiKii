@@ -24,37 +24,51 @@ def showTags(t):
         print(out + '\n')
 
 
+def has_letters(s):
+    result = False
+    if re.search('[a-zA-Z]', s):
+        result = True
+    return result
+
+
 def parse_line(tag):
     result = []
     for i in range(len(tag)):
         word = tag[i]
-        term = word.surface
+        term = word.surface.lower()
         prop = word.tag[0][0][0]
-        # print(term, prop)
+        kana = word.tag[1][0][0]
+        # print(term, prop, kana)
 
         has_num = any(char.isdigit() for char in term)
         if has_num:
             continue
 
         if prop == '名詞' and term != 'こと':
-            if i - 1 >= 0 and tag[i - 1].tag[0][0][0] == '接頭辞':
-                term = tag[i - 1].surface + term
-            if i + 1 <= len(tag) - 1 and tag[i + 1].tag[0][0][0] == '接尾辞':
+            if i - 1 >= 0 and tag[i-1].tag[0][0][0] == '接頭辞':
+                term = tag[i-1].surface + term
+                kana = tag[i-1].tag[1][0][0] + kana
+            if i + 1 <= len(tag) - 1 and tag[i+1].tag[0][0][0] == '接尾辞':
                 term = term + tag[i + 1].surface
+                kana = kana + tag[i+1].tag[1][0][0]
             term = term.strip()
             if len(term) > 1:
                 result.append(term.strip())
+                if not has_letters(term):
+                    result.append(kana)
 
         if prop == '動詞' or prop == '形容詞':
             term = term.strip()
             if len(term) > 1 and term != 'する':
                 result.append(term.strip())
+                if not has_letters(term):
+                    result.append(kana)
 
     return result
 
 
 # for i in range(len(file_list)):
-i = 9
+i = 0
 doc_id = 50000 * i
 output_path = Path.PreprocessResult
 file = open(input_path + file_list[i], 'r', encoding='utf-8')
@@ -74,25 +88,26 @@ while True:
     term = re.sub(r' ', '_', term)
     s = str(doc_id) + ' ' + term + '\n'
     outfile.write(s)
-    print(s)
+    # print(s)
 
     # Remove html tags
     bs = BeautifulSoup(line, "html.parser")
     line = bs.get_text()
 
     # Delete weird characters in content
-    content = re.sub(r'\\n\*|\\n|\"|。|、|•|→|／|＼', '', line)
+    content = re.sub(r'\\n\*|\\n|\"|。|、|•|→|／|＼|（|）', '', line)
     content = content.translate(str.maketrans('', '', string.punctuation))
     # print(content)
 
     # Tokenize content
     tag = mk.getTags(content)
-    # showTags(tag)
     result = parse_line(tag)
     result = ' '.join(result)
     result += '\n'
     outfile.write(result)
+    # print(result)
+    break
 
 file.close()
-print(file_list[i] + ' finished.')
+print('idx_' + str(i) + ' finished.')
 outfile.close()
