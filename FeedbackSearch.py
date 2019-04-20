@@ -1,15 +1,15 @@
 import IndexingWithWhoosh.MyIndexReader as MyIndexReader
 import SearchWithWhoosh.QueryRetrievalModel as QueryRetreivalModel
-import SearchWithWhoosh.ExtractQuery as ExtractQuery
-import PseudoRFSearch.PseudoRFRetrievalModel as PseudoRFRetrievalModel
+from SearchWithWhoosh.ExtractQuery import ExtractQuery
+from PseudoRFSearch.PseudoRFRetrievalModel import PseudoRFRetrievalModel
 import datetime
 
 
 startTime = datetime.datetime.now()
 index = MyIndexReader.MyIndexReader()
-pseudo_search = PseudoRFRetrievalModel.PseudoRFRetreivalModel(index)
-extractor = ExtractQuery.ExtractQuery()
-queries= extractor.getQuries()
+pseudo_search = PseudoRFRetrievalModel(index)
+extractor = ExtractQuery()
+queries = extractor.get_query()
 for query in queries:
     print(query.topicId,"\t",query.queryContent)
     results = pseudo_search.retrieveQuery(query, 20, 100, 0.4)
@@ -19,4 +19,4 @@ for query in queries:
         rank += 1
 
 endTime = datetime.datetime.now()
-print ("query search time: ", endTime - startTime)
+print("query search time: ", endTime - startTime)

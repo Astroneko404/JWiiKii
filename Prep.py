@@ -12,7 +12,7 @@ opt = "-model model/full_svm.mod"
 mk = Mykytea.Mykytea(opt)
 
 
-def showTags(t):
+def show_tags(t):
     for word in t:
         out = word.surface + "\t"
         for t1 in word.tag:

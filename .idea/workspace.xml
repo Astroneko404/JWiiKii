@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dedf7b2b-42d9-4ed9-b0d2-0291a9af96be" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Prep.py" beforeDir="false" afterPath="$PROJECT_DIR$/Prep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PseudoRFSearch/PseudoRFRetrievalModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/PseudoRFSearch/PseudoRFRetrievalModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SearchWithWhoosh/QueryRetrievalModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/SearchWithWhoosh/QueryRetrievalModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FeedbackSearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/FeedbackSearch.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,9 +22,21 @@
         <entry file="file://$PROJECT_DIR$/PseudoRFSearch/PseudoRFRetrievalModel.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1139">
-              <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+              <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
               <folding>
                 <element signature="e#0#4#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FeedbackSearch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/SearchWithWhoosh/QueryRetrievalModel.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="27">
-              <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+              <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -44,15 +54,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Prep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="189">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
                 <element signature="e#259#515#0" />
                 <element signature="e#542#629#0" />
+                <element signature="e#543#1363#0" />
               </folding>
             </state>
           </provider>
@@ -80,7 +91,6 @@
       <list>
         <option value="$PROJECT_DIR$/trim.py" />
         <option value="$PROJECT_DIR$/BasicSearch.py" />
-        <option value="$PROJECT_DIR$/FeedbackSearch.py" />
         <option value="$PROJECT_DIR$/IndexingWithWhoosh/MyIndexReader.py" />
         <option value="$PROJECT_DIR$/IndexingWithWhoosh/MyIndexWriter.py" />
         <option value="$PROJECT_DIR$/CreateIndex.py" />
@@ -95,6 +105,7 @@
         <option value="$PROJECT_DIR$/SearchWithWhoosh/QueryRetrievalModel.py" />
         <option value="$PROJECT_DIR$/PseudoRFSearch/PseudoRFRetrievalModel.py" />
         <option value="$PROJECT_DIR$/Prep.py" />
+        <option value="$PROJECT_DIR$/FeedbackSearch.py" />
       </list>
     </option>
   </component>
@@ -115,21 +126,6 @@
             <path>
               <item name="Preprocessing" type="b2602c69:ProjectViewProjectNode" />
               <item name="JPN_Prep" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Preprocessing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JPN_Prep" type="462c0819:PsiDirectoryNode" />
-              <item name="Classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Preprocessing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JPN_Prep" type="462c0819:PsiDirectoryNode" />
-              <item name="PseudoRFSearch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Preprocessing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JPN_Prep" type="462c0819:PsiDirectoryNode" />
-              <item name="SearchWithWhoosh" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -254,7 +250,7 @@
       <workItem from="1552843725327" duration="18456000" />
       <workItem from="1552944119258" duration="8000" />
       <workItem from="1555255034922" duration="14333000" />
-      <workItem from="1555439586389" duration="21214000" />
+      <workItem from="1555439586389" duration="23242000" />
     </task>
     <task id="LOCAL-00001" summary="Port">
       <created>1555256547113</created>
@@ -267,18 +263,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58814000" />
+    <option name="totallyTimeSpent" value="60842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1412" height="843" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2097489" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2097489" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35310733" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29237288" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -352,16 +348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FeedbackSearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BasicSearch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -420,9 +406,22 @@
     <entry file="file://$PROJECT_DIR$/SearchWithWhoosh/QueryRetrievalModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
-          <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#259#515#0" />
+            <element signature="e#542#629#0" />
+            <element signature="e#543#1363#0" />
           </folding>
         </state>
       </provider>
@@ -430,21 +429,19 @@
     <entry file="file://$PROJECT_DIR$/PseudoRFSearch/PseudoRFRetrievalModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
-          <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+          <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
           <folding>
             <element signature="e#0#4#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prep.py">
+    <entry file="file://$PROJECT_DIR$/FeedbackSearch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="187">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <element signature="e#259#515#0" />
-            <element signature="e#542#629#0" />
+            <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
