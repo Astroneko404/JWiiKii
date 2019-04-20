@@ -86,9 +86,9 @@ while True:
     # Search for the term and combine it with docNo
     term = re.search('http://ja.dbpedia.org/resource/(.*)\?dbpv', line).group(1).strip()
     term = re.sub(r' ', '_', term)
-    s = str(doc_id) + ' ' + term + '\n'
-    outfile.write(s)
-    # print(s)
+    s = str(doc_id) + ' ' + term
+    outfile.write(s+'\n')
+    print(s)
 
     # Remove html tags
     bs = BeautifulSoup(line, "html.parser")
@@ -97,7 +97,6 @@ while True:
     # Delete weird characters in content
     content = re.sub(r'\\n\*|\\n|\"|。|、|•|→|／|＼|（|）', '', line)
     content = content.translate(str.maketrans('', '', string.punctuation))
-    # print(content)
 
     # Tokenize content
     tag = mk.getTags(content)
@@ -106,7 +105,6 @@ while True:
     result += '\n'
     outfile.write(result)
     # print(result)
-    break
 
 file.close()
 print('idx_' + str(i) + ' finished.')
