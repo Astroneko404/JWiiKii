@@ -1,9 +1,8 @@
 class Query:
 
     def __init__(self):
+        self.queryContent = []
         return
-
-    queryContent = ""
 
     def get_content(self):
         return self.queryContent

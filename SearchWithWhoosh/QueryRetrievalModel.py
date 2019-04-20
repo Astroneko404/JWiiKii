@@ -24,8 +24,9 @@ class QueryRetrievalModel:
         for result in search_results:
             # print(self.searcher.stored_fields(result.docnum))
             a_doc = Document()
-            a_doc.setDocId(result.docnum)
-            a_doc.setDocNo(self.searcher.stored_fields(result.docnum)["doc_no"])
-            a_doc.setScore(result.score)
+            a_doc.set_id(result.docnum)
+            # a_doc.setDocNo(self.searcher.stored_fields(result.docnum)["doc_no"])
+            a_doc.set_score(result.score)
+            print(result.docnum, result.score)
             return_docs.append(a_doc)
         return return_docs

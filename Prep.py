@@ -5,7 +5,7 @@ from os import listdir
 import re
 import string
 
-input_path = Path.origin
+input_path = Path.Origin
 file_list = listdir(input_path)
 
 opt = "-model model/full_svm.mod"
@@ -32,7 +32,9 @@ def has_letters(s):
 
 
 def parse_line(tag):
-    result = []
+    result_origin = []
+    result_kana = []
+
     for i in range(len(tag)):
         word = tag[i]
         term = word.surface.lower()
@@ -53,18 +55,18 @@ def parse_line(tag):
                 kana = kana + tag[i+1].tag[1][0][0]
             term = term.strip()
             if len(term) > 1:
-                result.append(term.strip())
+                result_origin.append(term.strip())
                 if not has_letters(term):
-                    result.append(kana)
+                    result_kana.append(kana)
 
         if prop == '動詞' or prop == '形容詞':
             term = term.strip()
             if len(term) > 1 and term != 'する':
-                result.append(term.strip())
+                result_origin.append(term.strip())
                 if not has_letters(term):
-                    result.append(kana)
+                    result_kana.append(kana)
 
-    return result
+    return result_origin, result_kana
 
 
 # for i in range(len(file_list)):
@@ -88,7 +90,7 @@ while True:
     term = re.sub(r' ', '_', term)
     s = str(doc_id) + ' ' + term
     outfile.write(s+'\n')
-    print(s)
+    # print(s)
 
     # Remove html tags
     bs = BeautifulSoup(line, "html.parser")
@@ -101,10 +103,10 @@ while True:
     # Tokenize content
     tag = mk.getTags(content)
     result = parse_line(tag)
-    result = ' '.join(result)
+    r = result[0] + result[1]
+    result = ' '.join(r)
     result += '\n'
     outfile.write(result)
-    # print(result)
 
 file.close()
 print('idx_' + str(i) + ' finished.')

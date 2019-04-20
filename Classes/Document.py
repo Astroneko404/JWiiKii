@@ -4,23 +4,16 @@ class Document:
         return
 
     docid = ""
-    docno = ""
     score = 0.0
 
-    def getDocId(self):
+    def get_id(self):
         return self.docid
 
-    def getDocNo(self):
-        return self.docno
-
-    def getScore(self):
+    def get_score(self):
         return self.score
 
-    def setDocId(self, docid):
+    def set_id(self, docid):
         self.docid = docid
 
-    def setDocNo(self, no):
-        self.docno = no
-
-    def setScore(self, the_score):
+    def set_score(self, the_score):
         self.score = the_score

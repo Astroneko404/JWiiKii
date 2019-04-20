@@ -2,7 +2,7 @@
 PreprocessResult = 'data//prep_data//'
 
 # address of generated index file.
-IndexDir="data//index//"
+IndexDir = "data//index//"
 
 # address of raw data file.
-origin = "data//origin_data//"
+Origin = "data//origin_data//"

@@ -13,16 +13,16 @@ class MyIndexReader:
     searcher = []
 
     def __init__(self):
-        path_dir= Path.IndexDir
+        path_dir = Path.IndexDir
         self.searcher = index.open_dir(path_dir).searcher()
 
-    # Return the integer DocumentID of input string DocumentNo.
-    def getDocId(self, docNo):
-        return self.searcher.document_number(doc_no=docNo)
-
-    # Return the string DocumentNo of the input integer DocumentID.
-    def getDocNo(self, docId):
-        return self.searcher.stored_fields(docId)["doc_no"]
+    # # Return the integer DocumentID of input string DocumentNo.
+    # def getDocId(self, docNo):
+    #     return self.searcher.document_number(doc_no=docNo)
+    #
+    # # Return the string DocumentNo of the input integer DocumentID.
+    # def getDocNo(self, docId):
+    #     return self.searcher.stored_fields(docId)["doc_no"]
 
     # Return DF.
     def DocFreq(self, token):
