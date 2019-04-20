@@ -55,3 +55,5 @@ Data/prep_data/idx_6
 Data/prep_data/idx_7
 Data/prep_data/idx_8
 Data/prep_data/idx_9
+*.toc
+*.seg

@@ -1,22 +1,25 @@
-import Classes.Path as Path
-
-
 class PreprocessedCorpusReader:
 
     corpus = 0
 
-    def __init__(self, num):
-        self.corpus = open(Path.PreprocessResult + num, "r", encoding="utf8")
+    def __init__(self, file):
+        self.corpus = open(file, "r", encoding="utf8")
 
-    def nextDocument(self):
-        docNo = self.corpus.readline().strip()
-        docNo = docNo[0:docNo.find(" ")]
-        if docNo=="":
+    def next_document(self):
+        line = self.corpus.readline().strip()
+        if not line:
             self.corpus.close()
             return
-        content=self.corpus.readline().strip()
-        return [docNo, content]
 
-# test = "1226 chinese"
-# test = test[0:test.find(" ")]
-# print(test)
+        # Get docNo
+        line = line.split()
+        doc_no = line[0]
+
+        # Get doc content
+        content = self.corpus.readline().strip()
+        if not content:
+            raise Exception('Document ' + str(doc_no) + ' has no content')
+
+        # print(doc_no)
+        # print(content)
+        return doc_no, content

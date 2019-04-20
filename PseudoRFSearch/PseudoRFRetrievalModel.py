@@ -1,7 +1,7 @@
-import SearchWithWhoosh.QueryRetreivalModel as QueryRetreivalModel
+import SearchWithWhoosh.QueryRetrievalModel as QueryRetrievalModel
 
 
-class PseudoRFRetreivalModel:
+class PseudoRFRetrievalModel:
     indexReader = []
     collectionLength = 0
     qrmodel = []
@@ -9,16 +9,8 @@ class PseudoRFRetreivalModel:
     def __init__(self, ixReader):
         self.indexReader = ixReader
         self.collectionLength = ixReader.getCollLength()
-        self.model = QueryRetreivalModel.QueryRetreivalModel(ixReader)
+        self.model = QueryRetrievalModel(ixReader)
         return
-
-    # Search for the topic with pseudo relevance feedback.
-    # The returned results (retrieved documents) should be ranked by the score (from the most relevant to the least).
-    # query: The query to be searched for.
-    # TopN: The maximum number of returned document
-    # TopK: The count of feedback documents
-    # alpha: parameter of relevance feedback model
-    # return TopN most relevant document, in List structure
 
     def retrieveQuery(self, query, topN, topK, alpha):
         # get P(token|feedback documents)

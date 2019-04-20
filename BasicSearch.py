@@ -1,5 +1,5 @@
 import IndexingWithWhoosh.MyIndexReader as MyIndexReader
-import SearchWithWhoosh.QueryRetreivalModel as QueryRetreivalModel
+import SearchWithWhoosh.QueryRetrievalModel as QueryRetreivalModel
 import SearchWithWhoosh.ExtractQuery as ExtractQuery
 import datetime
 

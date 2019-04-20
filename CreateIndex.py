@@ -1,43 +1,58 @@
+from Classes import Path
 import datetime
 from IndexingWithWhoosh.PreProcessedCorpusReader import PreprocessedCorpusReader
 from IndexingWithWhoosh.MyIndexWriter import MyIndexWriter
 from IndexingWithWhoosh.MyIndexReader import MyIndexReader
-from os import listdir
+import os
 
 
 def WriteIndex():
     count = 0
-    num = 0
-    # Initiate pre-processed collection file reader.
-    corpus = PreprocessedCorpusReader(str(num))
-    # print("1")
+    # num = 0
+    file_list = os.listdir(Path.PreprocessResult)
+
     # Initiate the index writer.
-    indexWriter = MyIndexWriter.MyIndexWriter()
-    # Build index of corpus document by document.
-    while True:
-        doc = corpus.nextDocument()
-        if not doc:
-            if num == 9:
-                #print("2")
+    index_writer = MyIndexWriter()
+
+    for file in file_list:
+        path = Path.PreprocessResult + file
+        corpus = PreprocessedCorpusReader(path)
+
+        while True:
+            doc = corpus.next_document()
+            if not doc:
                 break
-            else:
-                num += 1
-                #print(num)
-                corpus = PreprocessedCorpusReader.PreprocessedCorpusReader(str(num))
-                doc = corpus.nextDocument()
-        #print(doc[0])
-        indexWriter.index(doc[0], doc[1])
-        count+=1
-        if count%30000==0:
-            print("finish ", count," docs")
+            index_writer.index(doc[0], doc[1])
+            count += 1
+            if count % 10000 == 0:
+                print('finish ', count, ' docs')
+
+    # Build index of corpus document by document.
+    # while True:
+    #     doc = corpus.nextDocument()
+    #     if not doc:
+    #         if num == 9:
+    #             #print("2")
+    #             break
+    #         else:
+    #             num += 1
+    #             #print(num)
+    #             corpus = PreprocessedCorpusReader.PreprocessedCorpusReader(str(num))
+    #             doc = corpus.nextDocument()
+    #     #print(doc[0])
+    #     indexWriter.index(doc[0], doc[1])
+    #     count+=1
+    #     if count%30000==0:
+    #         print("finish ", count," docs")
+
     print("totally finish ", count, " docs")
-    indexWriter.close()
+    index_writer.close()
     return
 
 
-def ReadIndex(type, token):
+def ReadIndex(token):
     # Initiate the index file reader.
-    index = MyIndexReader.MyIndexReader(type)
+    index = MyIndexReader()
     # retrieve the token.
     df = index.DocFreq(token)
     ctf = index.CollectionFreq(token)
@@ -53,20 +68,6 @@ def ReadIndex(type, token):
 startTime = datetime.datetime.now()
 print ("index start", startTime)
 WriteIndex()
-print ("indexover")
+print ("index writing finished")
 endTime = datetime.datetime.now()
 print("index web corpus running time: ", endTime - startTime)
-
-# startTime = datetime.datetime.now()
-# ReadIndex("trecweb", "acow")
-# endTime = datetime.datetime.now()
-# print ("load index & retrieve the token running time: ", endTime - startTime)
-
-# startTime = datetime.datetime.now()
-# WriteIndex("trectext")
-# endTime = datetime.datetime.now()
-# print ("index web corpus running time: ", endTime - startTime)
-# startTime = datetime.datetime.now()
-# ReadIndex("trectext", "normal")
-# endTime = datetime.datetime.now()
-# print ("load index & retrieve the token running time: ", endTime - startTime)

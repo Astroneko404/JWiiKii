@@ -5,6 +5,7 @@ import whoosh.index as index
 from whoosh.qparser import QueryParser
 from whoosh import scoring
 
+
 class QueryRetrievalModel:
 
     indexReader=[]
@@ -18,12 +19,6 @@ class QueryRetrievalModel:
         self.query_parser = QueryParser("doc_content", self.searcher.schema)
         return
 
-
-    # query:  The query to be searched for.
-    # topN: The maximum number of returned documents.
-    # The returned results (retrieved documents) should be ranked by the score (from the most relevant to the least).
-    # You will find our IndexingLucene.Myindexreader provides method: docLength().
-    # Returned documents should be a list of Document.
     def retrieveQuery(self, query, topN):
         query_input=self.query_parser.parse(query.getQueryContent())
         search_results = self.searcher.search(query_input, limit=topN)

@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dedf7b2b-42d9-4ed9-b0d2-0291a9af96be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicSearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/BasicSearch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Path.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Path.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateIndex.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateIndex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FeedbackSearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/FeedbackSearch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IndexingWithWhoosh/PreProcessedCorpusReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/IndexingWithWhoosh/PreProcessedCorpusReader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prep/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prep/trim.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PseudoRFSearch/PseudoRFRetrievalModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/PseudoRFSearch/PseudoRFRetrievalModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SearchWithWhoosh/QueryRetreivalModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/SearchWithWhoosh/QueryRetrievalModel.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,75 +20,56 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Preprocessing$test.coverage" NAME="test Coverage Results" MODIFIED="1552917611981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Preprocessing$test.coverage" NAME="test Coverage Results" MODIFIED="1555726799534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Preprocessing$trim.coverage" NAME="trim Coverage Results" MODIFIED="1552846163870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test$test.coverage" NAME="test Coverage Results" MODIFIED="1551402544430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Preprocessing$CreateIndex.coverage" NAME="CreateIndex Coverage Results" MODIFIED="1555256136890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Preprocessing$CreateIndex.coverage" NAME="CreateIndex Coverage Results" MODIFIED="1555729539818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Prep/test.py">
+        <entry file="file://$PROJECT_DIR$/PseudoRFSearch/PseudoRFRetrievalModel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-281">
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="78">
+              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BasicSearch.py">
+        <entry file="file://$PROJECT_DIR$/SearchWithWhoosh/ExtractQuery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IndexingWithWhoosh/MyIndexWriter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/Path.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CreateIndex.py">
+        <entry file="file://$PROJECT_DIR$/Classes/Query.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SearchWithWhoosh/QueryRetrievalModel.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+              <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#1169#1665#0" />
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IndexingWithWhoosh/PreProcessedCorpusReader.py">
+        <entry file="file://$PROJECT_DIR$/PseudoRFSearch/returnOriginContent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="27">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,23 +90,27 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/trim.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/BasicSearch.py" />
         <option value="$PROJECT_DIR$/FeedbackSearch.py" />
         <option value="$PROJECT_DIR$/IndexingWithWhoosh/MyIndexReader.py" />
         <option value="$PROJECT_DIR$/SearchWithWhoosh/ExtractQuery.py" />
-        <option value="$PROJECT_DIR$/PseudoRFSearch/PseudoRFRetrievalModel.py" />
-        <option value="$PROJECT_DIR$/IndexingWithWhoosh/PreProcessedCorpusReader.py" />
         <option value="$PROJECT_DIR$/IndexingWithWhoosh/MyIndexWriter.py" />
-        <option value="$PROJECT_DIR$/Classes/Path.py" />
         <option value="$PROJECT_DIR$/CreateIndex.py" />
+        <option value="$PROJECT_DIR$/Classes/Path.py" />
+        <option value="$PROJECT_DIR$/Prep/test.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/IndexingWithWhoosh/PreProcessedCorpusReader.py" />
+        <option value="$PROJECT_DIR$/PseudoRFSearch/returnOriginContent.py" />
+        <option value="$PROJECT_DIR$/SearchWithWhoosh/QueryRetreivalModel.py" />
+        <option value="$PROJECT_DIR$/SearchWithWhoosh/QueryRetrievalModel.py" />
+        <option value="$PROJECT_DIR$/PseudoRFSearch/PseudoRFRetrievalModel.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="10" />
-    <option name="width" value="1810" />
-    <option name="height" value="1043" />
+    <option name="y" value="9" />
+    <option name="width" value="1812" />
+    <option name="height" value="1045" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -142,11 +133,6 @@
             <path>
               <item name="Preprocessing" type="b2602c69:ProjectViewProjectNode" />
               <item name="JPN_Prep" type="462c0819:PsiDirectoryNode" />
-              <item name="IndexingWithWhoosh" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Preprocessing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JPN_Prep" type="462c0819:PsiDirectoryNode" />
               <item name="PseudoRFSearch" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -163,9 +149,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DES" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -247,6 +234,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.CreateIndex" />
+      <item itemvalue="Python.trim" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.CreateIndex" />
@@ -270,12 +262,21 @@
       <workItem from="1551403424996" duration="1635000" />
       <workItem from="1552843725327" duration="18456000" />
       <workItem from="1552944119258" duration="8000" />
-      <workItem from="1555255034922" duration="1501000" />
+      <workItem from="1555255034922" duration="14333000" />
+      <workItem from="1555439586389" duration="15669000" />
     </task>
+    <task id="LOCAL-00001" summary="Port">
+      <created>1555256547113</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1555256547113</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24768000" />
+    <option name="totallyTimeSpent" value="53269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1412" height="843" extended-state="6" />
@@ -286,7 +287,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3036723" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3361582" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -302,6 +303,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +313,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/JPN_Prep" />
     </ignored-roots>
+    <MESSAGE value="Port" />
+    <option name="LAST_COMMIT_MESSAGE" value="Port" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../2140_Information_Retrieval_Assignment_3/src/HW3Main.py">
@@ -329,56 +333,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/IndexingWithWhoosh/MyIndexReader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="95" column="38" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prep/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-281">
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FeedbackSearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PseudoRFSearch/returnOriginContent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="-92">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PseudoRFSearch/PseudoRFRetrievalModel.py">
+    <entry file="file://$PROJECT_DIR$/IndexingWithWhoosh/MyIndexWriter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="36">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SearchWithWhoosh/ExtractQuery.py">
+    <entry file="file://$PROJECT_DIR$/Prep/test.py" />
+    <entry file="file://$PROJECT_DIR$/Classes/Path.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="119">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-201">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#229#483#0" />
+            <element signature="e#511#1316#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeedbackSearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -392,50 +393,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IndexingWithWhoosh/MyIndexReader.py">
+    <entry file="file://$PROJECT_DIR$/PseudoRFSearch/returnOriginContent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-577">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="27">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IndexingWithWhoosh/MyIndexWriter.py">
+    <entry file="file://$PROJECT_DIR$/SearchWithWhoosh/QueryRetrievalModel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="204">
+          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Path.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IndexingWithWhoosh/PreProcessedCorpusReader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="323">
+          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CreateIndex.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        <state relative-caret-position="129">
+          <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#1169#1665#0" />
+            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#1492#1976#0" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PseudoRFSearch/PseudoRFRetrievalModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchWithWhoosh/ExtractQuery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Query.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

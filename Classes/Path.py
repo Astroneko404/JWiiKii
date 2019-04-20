@@ -5,4 +5,4 @@ PreprocessResult = 'data//prep_data//'
 IndexDir="data//index//"
 
 # address of raw data file.
-origin ="data//origin_data//part_"
+origin = "data//origin_data//"
