@@ -1,5 +1,6 @@
 from Classes.Document import Document
 import Classes.Path as Path
+# from Classes.Query import Query
 import whoosh.index as index
 from whoosh.qparser import QueryParser
 from whoosh import scoring
@@ -17,7 +18,7 @@ class QueryRetrievalModel:
         return
 
     def retrieve_query(self, query, top_n):
-        query_input = self.query_parser.parse(query.getQueryContent())
+        query_input = self.query_parser.parse(query.get_content())
         search_results = self.searcher.search(query_input, limit=top_n)
         return_docs = []
         for result in search_results:

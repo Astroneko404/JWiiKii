@@ -9,20 +9,17 @@ class PseudoRFRetrievalModel:
 
     def __init__(self, ixReader):
         self.indexReader = ixReader
-        self.collectionLength = ixReader.getCollLength()
+        self.collection_length = ixReader.getCollLength()
         self.model = QueryRetrievalModel(ixReader)
         return
 
     def retrieve_query(self, query, topN, topK, alpha):
-        # get P(token|feedback documents)
-        TokenRFScore = self.GetTokenRFScore(query, topK)
-
         # sort all retrieved documents from most relevant to least, and return TopN
         results = []
         mu = 2000
 
         # Get topK feedback documents
-        feedback_doc_list = self.model.retrieveQuery(query, topK)
+        feedback_doc_list = self.model.retrieve_query(query, topK)
         feedback_doc_list = [x.getDocId() for x in feedback_doc_list]
 
         # get P(token|feedback documents)
@@ -71,10 +68,23 @@ class PseudoRFRetrievalModel:
             doc.setDocNo(self.indexReader.getDocNo(ranking_sorted[i][0]))
             doc.setScore(ranking_sorted[i][1])
             result.append(doc)
+
         return results
 
-    def GetTokenRFScore(self, query, topK):
+    def GetTokenRFScore(self, query, topK, feedback_doc_list):
+        # for each token in the query, you should calculate token's score in feedback documents:
+        #   P(token|feedback documents)
+        # use Dirichlet smoothing
+        # save {token: score} in dictionary TokenRFScore, and return it
         TokenRFScore = {}
+        mu = 2000
+
+        token_list = query.getQueryContent().split()
+        token_list = [x for x in token_list if x != 'OR']
+        for token in token_list:
+            feedback_score = self.feedback_score(token, feedback_doc_list, mu)
+            TokenRFScore[token] = feedback_score
+
         return TokenRFScore
 
     # A helper method that calculates P(q_i | F)
