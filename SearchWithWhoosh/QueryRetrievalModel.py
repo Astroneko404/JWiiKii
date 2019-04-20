@@ -1,4 +1,4 @@
-import Classes.Document as Document
+from Classes.Document import Document
 import Classes.Path as Path
 import whoosh.index as index
 from whoosh.qparser import QueryParser
@@ -6,9 +6,7 @@ from whoosh import scoring
 
 
 class QueryRetrievalModel:
-
     indexReader = []
-
     query_parser = []
     searcher = []
 
@@ -18,13 +16,13 @@ class QueryRetrievalModel:
         self.query_parser = QueryParser("doc_content", self.searcher.schema)
         return
 
-    def retrieveQuery(self, query, topN):
-        query_input=self.query_parser.parse(query.getQueryContent())
-        search_results = self.searcher.search(query_input, limit=topN)
-        return_docs=[]
+    def retrieve_query(self, query, top_n):
+        query_input = self.query_parser.parse(query.getQueryContent())
+        search_results = self.searcher.search(query_input, limit=top_n)
+        return_docs = []
         for result in search_results:
             # print(self.searcher.stored_fields(result.docnum))
-            a_doc=Document.Document()
+            a_doc = Document()
             a_doc.setDocId(result.docnum)
             a_doc.setDocNo(self.searcher.stored_fields(result.docnum)["doc_no"])
             a_doc.setScore(result.score)
