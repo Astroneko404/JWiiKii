@@ -1,26 +1,23 @@
 from datetime import datetime
 from IndexingWithWhoosh.MyIndexReader import MyIndexReader
 import PseudoRFSearch.ProportionalScore as ProportionalScore
-print(datetime.now())
 from SearchWithWhoosh.ExtractQuery import ExtractQuery
-print(datetime.now())
 
 startTime = datetime.now()
 
-print('Start index reading')
 index = MyIndexReader()
-print('Finish index reading')
+print('Finish index reading in', datetime.now() - startTime)
 
-s = '東京'
+s = '東京テレビ'
 extractor = ExtractQuery(s)
-q = extractor.get_query()
-search = ProportionalScore.ProportionalScore(q, index)
+q_origin, q_kana = extractor.get_query()
+content_list = [q_origin, q_kana]
+search = ProportionalScore.ProportionalScore(content_list, index)
 
-print(q.get_content())
 results = search.get_n(20)
 rank = 1
 for result in results:
-    print(q, ' ', result.get_id(), ' ', rank, ' ', result.get_score())
+    print(q_origin, ' ', result.get_id(), ' ', rank, ' ', result.get_score())
     rank += 1
 
 endTime = datetime.now()

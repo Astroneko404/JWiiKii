@@ -9,6 +9,7 @@ class ProportionalScore:
     def __init__(self, query_list, idxReader):
         self.origin_query = query_list[0]
         self.kana_query = query_list[1]
+        print(self.origin_query.get_content())
         self.model = QueryRetrievalModel(idxReader)
         self.list_size = 150
 

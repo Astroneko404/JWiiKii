@@ -1,5 +1,5 @@
 class Query:
-
+    # the content of query should be two lists
     def __init__(self):
         self.queryContent = []
         return

@@ -6,3 +6,6 @@ IndexDir = "data//index//"
 
 # address of raw data file.
 Origin = "data//origin_data//"
+
+# address of Kytea model
+KTmodel = "Model/full_svm.mod"
