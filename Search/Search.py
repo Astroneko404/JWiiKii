@@ -1,5 +1,5 @@
 from datetime import datetime
-from IndexingWithWhoosh.MyIndexReader import MyIndexReader
+from Indexing.MyIndexReader import MyIndexReader
 import PseudoRFSearch.ProportionalScore as ProportionalScore
 from Search.ExtractQuery import ExtractQuery
 
@@ -13,7 +13,7 @@ def get_result(s):
     content_list = [q_origin, q_kana]
     search = ProportionalScore.ProportionalScore(content_list, index)
 
-    results = search.get_n(50)
+    results = search.get_n(25)
     rank = 1
     r_list = []
     for result in results:

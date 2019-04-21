@@ -1,4 +1,4 @@
-import IndexingWithWhoosh.MyIndexReader as MyIndexReader
+import Indexing.MyIndexReader as MyIndexReader
 import Search.QueryRetrievalModel as QueryRetreivalModel
 from Search.ExtractQuery import ExtractQuery
 from PseudoRFSearch.PseudoRFRetrievalModel import PseudoRFRetrievalModel

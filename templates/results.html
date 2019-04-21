@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	<title>JWiikii Results</title>
+</head>
+<body>
+	<header class="container-fluid">
+		<h2 class="name"><span style="color: red">J</span>Wiikii</h2>
+		<form class="resultForm" name="searchForm2" method="POST">
+            <input type="hidden" name="posttype" value="search"/>
+			<div class="input-group">
+				<input class="form-control query2 py-2 border-right-0 border" type="search" name="query" value="{{ queries }}" required>
+				<span class="input-group-append">
+              		<button type="submit" class="btn btn-outline-secondary border-left-0 border" type="button">
+                    	<i class="fa fa-search"></i>
+              		</button>
+            	</span>
+
+                <p style="margin-left: 50px; margin-top: 10px">total search time:</p>
+            </div>
+		</form>
+	</header>
+	<hr>
+	<main class="container">
+		<article>
+            {% for query in que %}
+			<a href={{ query.url }}><h3>{{ query.title }}</h3></a>
+			<p class="url">{{ query.url }}</p>
+			<p class="summary">{{ query.content }}</p>
+            <h3> </h3>
+            {% endfor %}
+
+		</article>
+
+        <form method="POST">
+                <input type="hidden" name="posttype" value="page"/>
+                <button name="btn" value="1" class="btn btn-link">1</button>
+                <button name="btn" value="2" class="btn btn-link">2</button>
+                <button name="btn" value="3" class="btn btn-link">3</button>
+                <button name="btn" value="4" class="btn btn-link">4</button>
+                <button name="btn" value="5" class="btn btn-link">5</button>
+                <button name="btn" value="next" class="btn btn-link">next ></button>
+            </form>
+	</main>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>

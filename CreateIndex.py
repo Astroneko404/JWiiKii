@@ -1,8 +1,8 @@
 from Classes import Path
 import datetime
-from IndexingWithWhoosh.PreProcessedCorpusReader import PreprocessedCorpusReader
-from IndexingWithWhoosh.MyIndexWriter import MyIndexWriter
-from IndexingWithWhoosh.MyIndexReader import MyIndexReader
+from Indexing.PreProcessedCorpusReader import PreprocessedCorpusReader
+from Indexing.MyIndexWriter import MyIndexWriter
+from Indexing.MyIndexReader import MyIndexReader
 import os
 
 

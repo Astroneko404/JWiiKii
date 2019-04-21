@@ -1,0 +1,77 @@
+body {
+	text-align: center;
+}
+
+.homeMain {
+	margin-top: 200px;
+}
+
+h1 {
+	font-size: 60px;
+}
+
+.homeForm {
+	margin: auto;
+}
+
+.query {
+	width: 70%;
+	display: inline-block;
+}
+
+.query2 {
+	width: 80%;
+	display: inline-block;
+}
+
+.name {
+	float: left;
+	display: inline-block;
+}
+
+.resultForm {
+	float: left;
+	width: 700px;
+	display: inline-block;
+	margin-left: 30px;
+}
+
+
+header {
+	margin-top: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	min-width: 824px;
+}
+
+article {
+	margin-left: 40px;
+	text-align: left;
+	width: 600px;
+	margin-bottom: 30px;
+}
+
+h3 {
+	color: #000099;
+	font-size: 20px;
+}
+
+p {
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+.url {
+	color: green;
+}
+
+.summary {
+	color: #696969;
+	overflow: hidden;
+   	text-overflow: ellipsis;
+   	display: -webkit-box;
+   	line-height: 16px;     /* fallback */
+   	max-height: 48px;      /* fallback */
+   	-webkit-line-clamp: 3; /* number of lines to show */
+   	-webkit-box-orient: vertical;
+}
