@@ -1,7 +1,4 @@
-from Classes.Query import Query
-from Mykytea import Mykytea
 import re
-import string
 
 
 def has_letters(s):
@@ -49,24 +46,13 @@ def parse_line(tag):
     return result_origin, result_kana
 
 
-class ExtractQuery:
-
-    def __init__(self, s):
-        self.s = s
-        self.mk = Mykytea("-model ../model/full_svm.mod")
-
-    # Return extracted queries with class Query in a list.
-    # The content of this query should be preprocessed
-    def get_query(self):
-        q = Query()
-
-        # Process the query content
-        content = re.sub(r'\\n\*|\\n|\"|。|、|•|→|／|＼', '', self.s)
-        content = content.translate(str.maketrans('', '', string.punctuation))
-        tag = self.mk.getTags(content)
-        result = parse_line(tag)
-        # print(result)
-
-        # Set query
-        q.set_content(result)
-        return q
+def show_tags(t):
+    for word in t:
+        out = word.surface + "\t"
+        for t1 in word.tag:
+            for t2 in t1:
+                for t3 in t2:
+                    out = out + "/" + str(t3)
+                out += "\t"
+            out += "\t"
+        print(out + '\n')
