@@ -1,5 +1,5 @@
 from Classes.Document import Document
-from SearchWithWhoosh.QueryRetrievalModel import QueryRetrievalModel
+from Search.QueryRetrievalModel import QueryRetrievalModel
 
 
 class PseudoRFRetrievalModel:

@@ -25,6 +25,6 @@ class ExtractQuery:
         result = parse_line(tag)
 
         # Set query
-        q_origin.set_content(' '.join(result[0]))
-        q_kana.set_content(' '.join(result[1]))
+        q_origin.set_content(' OR '.join(result[0]))
+        q_kana.set_content(' OR '.join(result[1]))
         return q_origin, q_kana

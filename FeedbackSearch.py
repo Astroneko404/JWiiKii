@@ -1,6 +1,6 @@
 import IndexingWithWhoosh.MyIndexReader as MyIndexReader
-import SearchWithWhoosh.QueryRetrievalModel as QueryRetreivalModel
-from SearchWithWhoosh.ExtractQuery import ExtractQuery
+import Search.QueryRetrievalModel as QueryRetreivalModel
+from Search.ExtractQuery import ExtractQuery
 from PseudoRFSearch.PseudoRFRetrievalModel import PseudoRFRetrievalModel
 import datetime
 

@@ -1,5 +1,5 @@
 from PseudoRFSearch.PseudoRFRetrievalModel import PseudoRFRetrievalModel
-from SearchWithWhoosh.QueryRetrievalModel import QueryRetrievalModel
+from Search.QueryRetrievalModel import QueryRetrievalModel
 
 
 class ProportionalScore:
@@ -22,12 +22,13 @@ class ProportionalScore:
         for doc in list_1:
             result_dict[doc.get_id()] = doc.get_score() * p
         for doc in list_2:
-            if result_dict[doc.get_id()]:
+            if doc.get_id in result_dict:
                 result_dict[doc.get_id()] += doc.get_score() * (1-p)
             else:
                 result_dict[doc.get_id()] = doc.get_score() * p
 
         result = sorted(result_dict.items(), key=lambda kv: kv[1], reverse=True)
         result = result[0:top_n]
+        # print(result)
 
         return result
