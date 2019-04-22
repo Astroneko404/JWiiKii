@@ -17,8 +17,8 @@ class PreprocessedCorpusReader:
 
         # Get doc content
         content = self.corpus.readline().strip()
-        if not content:
-            raise Exception('Document ' + str(doc_no) + ' has no content')
+        # if not content:
+        #     raise Exception('Document ' + str(doc_no) + ' has no content')
 
         # print(doc_no)
         # print(content)

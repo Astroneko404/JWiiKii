@@ -38,7 +38,7 @@ def search():
             content = returnOriginContent(result_list[i]).readDocument()
             output.append(content)
 
-        return render_template('results.html', que = output, queries = searchquery)
+        return render_template('results.html', que=output, queries=searchquery)
 
     if request.method == 'POST':
         posttype = request.form.get('posttype')
@@ -46,10 +46,10 @@ def search():
             output = []
             newquery = request.form.get('query', None)
             session['query'] = newquery
-            result_list = search(newquery)
+            result_list = get_result(newquery)
             session['result_list'] = result_list
             for i in range(0, 5):
-                output.append(returnOriginContent(result_list[i]))
+                output.append(returnOriginContent(result_list[i]).readDocument())
 
             return render_template('results.html', que=output, queries=newquery)
 
@@ -64,11 +64,11 @@ def search():
             else:
                 session['num'] = int(num)
 
-            lower_bound = session['num'] * 10
-            upper_bound = session['num'] * 10 + 10
+            lower_bound = (session['num']-1) * 5
+            upper_bound = (session['num']-1) * 5 + 5
 
             for i in range(lower_bound,upper_bound):
-                output.append(return_origin(result_list[i]))
+                output.append(returnOriginContent(result_list[i]).readDocument())
 
             # print(num)
             # print(session['num'])

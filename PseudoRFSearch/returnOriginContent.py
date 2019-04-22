@@ -23,6 +23,7 @@ class returnOriginContent:
         content = bs.get_text()
         content = content[1:]
         content = content[:-1]
+        content = re.sub(r'\\n\*|\\n', '', content)
 
         url = "http://ja.wikipedia.org/wiki/" + title
         out = searchResult(title, url, content)
