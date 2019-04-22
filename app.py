@@ -67,7 +67,7 @@ def search():
             lower_bound = (session['num']-1) * 5
             upper_bound = (session['num']-1) * 5 + 5
 
-            for i in range(lower_bound,upper_bound):
+            for i in range(lower_bound, upper_bound):
                 output.append(returnOriginContent(result_list[i]).readDocument())
 
             # print(num)

@@ -10,7 +10,7 @@ startTime = datetime.now()
 index = MyIndexReader()
 print('Finish index reading in', datetime.now() - startTime)
 
-s = 'ドラゴンクエスト周年'
+s = 'スポーツ番組'
 extractor = ExtractQuery(s)
 q_origin, q_kana = extractor.get_query()
 content_list = [q_origin, q_kana]
