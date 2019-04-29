@@ -4,6 +4,9 @@
 A search engine based on Japanese NIF context dataset from DBpedia.
 https://wiki.dbpedia.org/develop/getting-started
 
+### To run the program
+Run app.py
+
 ### Preprocessing
 ##### Prep.py
 Preprocess data files from NIF dataset
